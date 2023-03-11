@@ -19,13 +19,17 @@ services:
       - 8080:8080
     depends_on:
       - db
-  site:
-    container_name: php82
-    image: dahas68/php82
+  app:
+    container_name: php81
+    image: dahas68/php81
     build:
       context: ./
     ports:
       - 8000:80
+    volumes:
+      - type: bind
+        source: ./src
+        target: /var/www
     depends_on:
       - db
 volumes:
