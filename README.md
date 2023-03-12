@@ -27,11 +27,14 @@ services:
 
 ## Run container
 ````
-$ docker compose up
+$ docker compose up -d --build
 ````
 
-## Open Browser
+## Open App in Browser
 http://localhost:8000/
+
+## Open MySQL DB Adminer
+http://localhost:8080/
 
 ## Create your App
 

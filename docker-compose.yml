@@ -30,6 +30,8 @@ services:
       - type: bind
         source: ./src
         target: /var/www
+    extra_hosts:
+      - host.docker.internal:host-gateway
     depends_on:
       - db
 volumes:
