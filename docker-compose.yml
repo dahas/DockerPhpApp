@@ -23,7 +23,7 @@ services:
     container_name: php81
     image: user/php81
     build:
-      context: ./
+      context: ./php
     ports:
       - 8000:80
     volumes:
