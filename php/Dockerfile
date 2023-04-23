@@ -1,5 +1,11 @@
 FROM php:8.1.2-apache
 
+ARG UID
+ARG GID
+
+ENV UID=${UID}
+ENV GID=${GID}
+
 RUN a2enmod rewrite
 
 # Copy vhost configuration:
@@ -31,6 +37,9 @@ RUN apt-get purge -y g++ \
 
 WORKDIR /var/www
 
-RUN chown -R www-data:www-data /var/www
+RUN addgroup --gid ${GID} groupcontainer
+RUN adduser -u ${UID} -G groupcontainer -h /home/containeruser -D containeruser
+
+USER ${UID}
 
 CMD ["apache2-foreground"]

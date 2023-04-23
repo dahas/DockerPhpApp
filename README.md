@@ -7,36 +7,26 @@ $ cd YourProject
 $ git clone https://github.com/dahas/DockerPhpApp.git .
 ````
 
-## Change docker-compose.yml
+## Setting it up
 
-Open `docker-compose.yml` and change the following parameters according your needs:
-````
-services:
-  db:
-    ...
-    environment:
-      MYSQL_USER: <add your username here>
-      MYSQL_PASSWORD: <add your password here>
-      MYSQL_DATABASE: <add name of database here>
-      MYSQL_ROOT_PASSWORD: <add root password here>
-    ...
-  app:
-    ...
-    image: <add your docker hub username here>/php81
-````
+Rename `.env.example` to `.env` and replace the placeholders with the corresponding settings.
 
-## Run container
+## Run Docker and build the container
 ````
 $ docker compose up -d --build
 ````
 
-## Open App in Browser
-http://localhost:8000/
-
-## Open MySQL DB Adminer
-http://localhost:8080/
-
 ## Create your App
 
-Empty the `src` folder and put all files of your Application into it. Make sure your App has a `public` folder where the Apache can serve from.
+- Grant permissions on `source` folder:
+  ````
+  $ sudo chown -R <user>:<user> source/
+  ````
+- Put (clone) your Apps resources into `source` folder.
+- Your App requires a `public` folder where the Apache can serve from.
 
+## Open App in Browser
+http://localhost:2400/
+
+## Open MySQL DB Admin Tool
+http://localhost:8000/
