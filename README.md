@@ -1,4 +1,9 @@
-# Dockerize a PHP/MySQL App
+# Dockerized LAMP Stack
+
+- PHP 8.1.2
+- Composer
+- MariaDB
+- Apache
 
 ## Installation
 ````
