@@ -24,6 +24,7 @@ $ docker compose up -d --build
   ````
 - Put (clone) your Apps resources into `source` folder.
 - Your App requires a `public` folder where the Apache can serve from.
+- Instead of *localhost* or *127.0.0.1* use **db** (the service name) as MySQL host.
 
 ## Open App in Browser
 http://localhost:2400/

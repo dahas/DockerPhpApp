@@ -23,6 +23,8 @@ RUN apt-get update && \
 RUN docker-php-ext-install zip pdo_mysql
 RUN pecl install -o -f xdebug-3.2.0 \
     && docker-php-ext-enable xdebug
+RUN docker-php-ext-install mysqli \
+    && docker-php-ext-enable mysqli
 
 COPY ./install-composer.sh ./
 COPY ./php.ini /usr/local/etc/php/
