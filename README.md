@@ -25,9 +25,9 @@ $ docker compose up -d --build
 
 - Grant permissions on `source` folder:
   ````
-  $ sudo chown -R <user>:<user> source/
+  $ sudo chown -R <user>:<group> source/
   ````
-- Put (clone) your Apps resources into `source` folder.
+- Put (or clone) your Apps resources into `source` folder.
 - Your App requires a `public` folder where the Apache can serve from.
 - Instead of *localhost* or *127.0.0.1* use **db** (the service name) as MySQL host.
 
