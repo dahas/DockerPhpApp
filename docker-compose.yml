@@ -21,7 +21,7 @@ services:
       - db
   app:
     container_name: php812
-    image: ${SYS_USER}/php81
+    image: $USER/php81
     build:
       context: ./php
       args:

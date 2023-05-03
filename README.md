@@ -21,7 +21,7 @@ $ docker compose up -d --build
 ## Create your App
 - Grant permissions on `source` folder:
   ````
-  $ sudo chown -R <user>:<group> source/
+  $ sudo chown -R $USER:$GROUP source/
   ````
 - Put (or clone) your Apps resources into the `source` folder.
 - Your App requires a `public` folder where the Apache can serve from.
